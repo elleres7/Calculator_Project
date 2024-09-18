@@ -1,16 +1,15 @@
-# operations.py
+# Atualizando as funções para retornarem valores ao invés de imprimir
 
-def som(x,y):
-    print(f"\nResultado: {x + y}")
+def som(x, y):
+    return x + y  # Agora retorna o valor ao invés de imprimir
 
-def sub(x,y):
-    print(f"\nResultado: {x - y}")
+def sub(x, y):
+    return x - y
 
-def mult(x,y):
-    print(f"\nResultado: {x * y}")
+def mult(x, y):
+    return x * y
 
 def div(x, y):
     if y == 0:
-        print("\nNão se pode dividir por Zero!")
-    else:
-        print(f"\nResultado: {x / y}")
+        raise ValueError("Não se pode dividir por Zero!")  # Levanta uma exceção para zero
+    return x / y  # Retorna o resultado da divisão
